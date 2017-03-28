@@ -18,7 +18,6 @@ function createAsset()
     xhr.onprogress = function () {
         let data = xhr.responseText;
         let array = data.split('&&');
-		alert(data);
         for(let i = 0; i < array.length; i++)
 		{
             if(array[i] != '')
@@ -60,7 +59,6 @@ function createAsset()
         if(xhr.readyState === 4)
 		{
             let data = xhr.responseText;
-			alert(data);
             let array = data.split('&&');
             if(typeof JSON.parse(array[array.length -1]).error != 'undefined')
 			{
@@ -84,8 +82,6 @@ function createAsset()
         }
     };
 
-	alert('final data');
-	alert(JSON.stringify(data));
     xhr.send(JSON.stringify(data));
 }
 
