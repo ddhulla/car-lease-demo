@@ -18,8 +18,7 @@ function createAsset()
     xhr.onprogress = function () {
         let data = xhr.responseText;
         let array = data.split('&&');
-		alert(data);
-		alert("After Data");
+		alert('After Data');
         for(let i = 0; i < array.length; i++)
 		{
             if(array[i] != '')
