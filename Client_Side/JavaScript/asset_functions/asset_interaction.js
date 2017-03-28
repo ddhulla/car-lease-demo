@@ -85,7 +85,7 @@ function createAsset()
     };
 
 	alert('final data');
-	alert(data);
+	alert(JSON.stringify(data));
     xhr.send(JSON.stringify(data));
 }
 
