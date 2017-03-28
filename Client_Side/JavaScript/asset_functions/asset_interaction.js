@@ -19,6 +19,7 @@ function createAsset()
         let data = xhr.responseText;
         let array = data.split('&&');
 		alert('After Data');
+        alert(data);
         for(let i = 0; i < array.length; i++)
 		{
             if(array[i] != '')
