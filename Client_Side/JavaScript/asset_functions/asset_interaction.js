@@ -60,6 +60,7 @@ function createAsset()
         if(xhr.readyState === 4)
 		{
             let data = xhr.responseText;
+			alert(data);
             let array = data.split('&&');
             if(typeof JSON.parse(array[array.length -1]).error != 'undefined')
 			{
