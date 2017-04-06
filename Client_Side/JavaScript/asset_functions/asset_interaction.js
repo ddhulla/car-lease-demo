@@ -109,6 +109,7 @@ function transferAsset()
     xhr.open('PUT', '/blockchain/assets/vehicles/'+transferArray[transferIndex-1].v5cID+'/owner', true); //PUT (Updates)
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.overrideMimeType('text/plain');
+    alert('Transfer Assets');
     xhr.onprogress = function () {
         let data = xhr.responseText;
         let array = data.split('&&');
