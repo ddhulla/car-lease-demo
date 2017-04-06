@@ -106,7 +106,6 @@ function transferAsset()
 {
     let found = [];
     let xhr = new XMLHttpRequest();
-    window.alert('Transferring Asset');
     xhr.open('PUT', '/blockchain/assets/vehicles/'+transferArray[transferIndex-1].v5cID+'/owner', true); //PUT (Updates)
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.overrideMimeType('text/plain');
