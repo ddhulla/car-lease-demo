@@ -226,6 +226,8 @@ func (t *SimpleChaincode) save_changes(stub shim.ChaincodeStubInterface, v Vehic
 //==============================================================================================================================
 func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 
+        fmt.Println("Entering Invoke ddhulla")
+
 	caller, caller_affiliation, err := t.get_caller_data(stub)
 
 	if err != nil { return nil, errors.New("Error retrieving caller information")}
