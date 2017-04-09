@@ -243,6 +243,9 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 
 	caller, caller_affiliation, err := t.get_caller_data(stub)
 
+	caller := "DVLA"
+        caller_affiliation := "regulator"
+
 	fmt.Println(caller)
 	fmt.Println(caller_affiliation)
 
