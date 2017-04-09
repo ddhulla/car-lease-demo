@@ -229,7 +229,11 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
         fmt.Println("Entering Invoke ddhulla....")
 	fmt.Println(function)
 	fmt.Println(len(args))
-	//fmt.Println(args[0])
+	fmt.Println(args[0])
+
+	if len(args)>1 {
+	    fmt.Println(args[1])
+	}
 
 	//infoLevel, _ := shim.LogLevel("INFO")
 	//shim.SetLoggingLevel(infoLevel)
@@ -239,8 +243,8 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 
 	caller, caller_affiliation, err := t.get_caller_data(stub)
 
-	//fmt.Println(caller)
-	//fmt.Println(caller_affiliation)
+	fmt.Println(caller)
+	fmt.Println(caller_affiliation)
 
 	if err != nil { return nil, errors.New("Error retrieving caller information")}
 
