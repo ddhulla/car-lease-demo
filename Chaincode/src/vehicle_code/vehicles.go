@@ -243,8 +243,8 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 
 	caller, caller_affiliation, err := t.get_caller_data(stub)
 
-	caller := "DVLA"
-        caller_affiliation := "regulator"
+	//caller := "DVLA"
+        //caller_affiliation := "regulator"
 
 	fmt.Println(caller)
 	fmt.Println(caller_affiliation)
@@ -271,7 +271,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
         if strings.Contains(function, "update") == false && function != "scrap_vehicle"    { 									// If the function is not an update or a scrappage it must be a transfer so we need to get the ecert of the recipient.
 
 
-				if 		   function == "authority_to_manufacturer" { return t.authority_to_manufacturer(stub, v, caller, caller_affiliation, args[0], "manufacturer")
+				if 		   function == "authority_to_manufacturer" { return t.authority_to_manufacturer(stub, v, "DVLA", "regulator", args[0], "manufacturer")
 				} else if  function == "manufacturer_to_private"   { return t.manufacturer_to_private(stub, v, caller, caller_affiliation, args[0], "private")
 				} else if  function == "private_to_private" 	   { return t.private_to_private(stub, v, caller, caller_affiliation, args[0], "private")
 				} else if  function == "private_to_lease_company"  { return t.private_to_lease_company(stub, v, caller, caller_affiliation, args[0], "lease_company")
