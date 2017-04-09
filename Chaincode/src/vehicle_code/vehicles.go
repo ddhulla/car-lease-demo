@@ -226,13 +226,14 @@ func (t *SimpleChaincode) save_changes(stub shim.ChaincodeStubInterface, v Vehic
 //==============================================================================================================================
 func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 
-        fmt.Println("Entering Invoke ddhulla")
+        fmt.Println("Entering Invoke ddhulla....")
+	fmt.Println(function)
 
-	infoLevel, _ := shim.LogLevel("INFO")
-	shim.SetLoggingLevel(infoLevel)
-	myLogger := shim.NewLogger("SampleChaincodeLogger")
-	myLogger.SetLevel(infoLevel)
-	myLogger.Info("ddhulla Logger Message")
+	//infoLevel, _ := shim.LogLevel("INFO")
+	//shim.SetLoggingLevel(infoLevel)
+	//myLogger := shim.NewLogger("SampleChaincodeLogger")
+	//myLogger.SetLevel(infoLevel)
+	//myLogger.Info("ddhulla Logger Message")
 
 	caller, caller_affiliation, err := t.get_caller_data(stub)
 
